@@ -1,0 +1,71 @@
+---
+
+import SkillsCard from '../components/SkillCard.astro';
+---
+
+
+<div class="text-center py-12">
+	<h1 class="text-4xl font-bold mb-4 text-teal-600">Bienvenido a mi Portafolio</h1>
+	<p class="mb-6 text-lg">Mi objetivo es combinar diseño y tecnología para resolver problemas de manera creativa.</p>
+	<a class="w-64 h-64 bg-pink-500 px-4 py-4 rounded-full hover:bg-opacity-70 transition-colors inline-block" >
+		<img src="/lesly2.jpg" alt="A description of my image." class="w-full h-full object-cover rounded-full"
+		/>
+	  </a>
+	  
+</div>
+<div class="mt-8 grid grid-cols-1 md:grid-cols-1 gap-8">
+	<div class="bg-pink-100 p-8 rounded-lg">
+		<h2 class="text-2xl font-semibold mb-4 text-pink-500">Sobre Mí</h2>
+		<p class="px-10">
+			Soy Lesly Flores, programadora junior con una combinación única de habilidades técnicas, 
+			pensamiento analítico y experiencia en desarrollo de software. Me encanta abordar 
+			desafíos desde diferentes perspectivas, adaptarme a entornos dinámicos y trabajar 
+			en equipo para crear soluciones innovadoras que marquen la diferencia.
+		</p>
+	</div>
+	<div class="bg-teal-100 p-4 rounded-lg">
+		<h2 class="text-2xl font-semibold mb-4 text-teal-600">Mis Habilidades Técnicas</h2>
+		<p>
+			<SkillsCard />	
+		</p>
+	</div>
+	<div class="bg-pink-100 p-8 rounded-lg mt-12 grid grid-cols-1 md:grid-cols-2 gap-8" >
+		<div class="p-4">
+		<h2 class="text-2xl font-semibold mb-4 text-pink-500">Ciberseguridad</h2>
+		<p class="px-8">
+			Como parte de mi constante esfuerzo por crecer profesionalmente y expandir mis habilidades en el 
+			ámbito de la tecnología, tuve el honor de completar el programa <strong> Mujer Digital</strong> de <strong>Junior Achievement Américas. </strong> 
+			 Este programa, con una duración de 270 horas, me permitió especializarme en la carrera de 
+			 <strong>Analista Junior de Ciberseguridad de CISCO</strong>. Durante este curso, adquirí conocimientos fundamentales 
+			en seguridad digital, análisis de riesgos y protección de datos, habilidades que me permiten abordar 
+			desafíos de seguridad con un enfoque técnico y actualizado.
+		</p>
+		</div>
+		<div> 
+			<a class="w-80 h-80 bg-pink-500 px-2 py-2 rounded-lg hover:bg-opacity-70 transition-colors inline-block" >
+				<img src="/mujer_digital.jpg" alt="A description of my image." class="w-full h-full object-cover rounded-lg"
+				/>
+			  </a>
+		</div>
+	</div>
+	<div class="bg-pink-100 p-8 rounded-lg mt-12 grid grid-cols-1 md:grid-cols-2 gap-8" >
+		<div> 
+			<a class="w-80 h-80 bg-pink-500 px-2 py-2 rounded-lg hover:bg-opacity-70 transition-colors inline-block" >
+				<img src="/glasswing.jpeg" alt="A description of my image." class="w-full h-full object-cover rounded-lg"
+				/>
+			  </a>
+		</div>
+		<div class="p-4">
+		<h2 class="text-2xl font-semibold mb-4 text-pink-500">Voluntariados</h2>
+		<p >
+			Como parte de mi constante esfuerzo por crecer profesionalmente y expandir mis habilidades en el 
+			ámbito de la tecnología, tuve el honor de completar el programa <strong> Mujer Digital</strong> de <strong>Junior Achievement Américas. </strong> 
+			 Este programa, con una duración de 270 horas, me permitió especializarme en la carrera de 
+			 <strong>Analista Junior de Ciberseguridad de CISCO</strong>. Durante este curso, adquirí conocimientos fundamentales 
+			en seguridad digital, análisis de riesgos y protección de datos, habilidades que me permiten abordar 
+			desafíos de seguridad con un enfoque técnico y actualizado.
+		</p>
+		</div>
+		
+	</div>
+</div>

@@ -1,0 +1,32 @@
+---
+
+interface proyectoL {
+  name: string;
+  url: string;
+  descripcion: string;
+}
+
+const proyectoLs: proyectoL[] = [
+  { name: "PetFinder", url: "/pet_finder.png", descripcion: "logos:nnk.jn.n,n,n,mn,css-3" },
+  { name: "Better Than Slice", url: "/bts_mockup.png", descripcion: "logosgigghj,nbbkbkig:nextjs-icon" },
+];
+
+--- 
+<div>
+    {proyectoLs.map((proyec) => (
+<div class="bg-white shadow-md rounded-lg overflow-hidden grid grid-cols-2 md:grid-cols-2 lg:grid-cols-1 gap-6">
+    <a class="w-128 h-96 bg-teal-500 px-2 py-2 rounded-xl hover:bg-opacity-70 transition-colors inline-block" >
+        <img src={proyec.url} alt="A description of my image." class="w-full h-full object-cover rounded-xls"
+        />
+      </a>
+    <div class="p-4">
+        <h2 class="text-xl font-semibold mb-2">{proyec.name}</h2>
+        <p class="text-gray-600">{proyec.descripcion}</p>
+    </div>
+</div>
+))}  
+
+</div>
+
+
+

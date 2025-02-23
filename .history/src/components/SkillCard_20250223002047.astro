@@ -1,0 +1,74 @@
+---
+import ProgressBar from "../components/ProgressBar.astro";
+interface Skill {
+  name: string;
+  level: number;
+}
+
+interface SkillCategory {
+  name: string;
+  skills: Skill[];
+}
+
+const skillCategories: SkillCategory[] = [
+  {
+    name: "Lenguajes",
+    skills: [
+      { name: "TypeScript", level: 50  },
+      { name: "Python", level: 40},
+      { name: "HTML", level: 50},
+      { name: "Java", level: 50},
+      { name: "PHP", level: 65},
+    ]
+  },
+  { 
+    name: "Bases de Datos",
+    skills: [
+      { name: "MongoDB", level:45},
+      { name: "MySQL", level: 40},
+      { name: "PostgreSQL", level: 45},
+      { name: "Oracle Batabese", level: 50},
+    ]
+  },
+  {
+    name: "Frameworks",
+    skills: [
+      { name: "Laravel", level: 40},
+      { name: "Next.js", level: 50 },
+      { name: "Astro", level: 35},
+    ]
+  },
+  {
+    name: "Herramientas",
+    skills: [
+      { name: "Git", level:50},
+      { name: "VS Code", level: 50 },
+      { name: "Figma", level: 65 },
+    ]
+  }
+];
+
+--- 
+
+<div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 w-full max-w-4xl mx-auto">
+  <div class="grid md:grid-cols-2 gap-6"> 
+    {skillCategories.map((category) => (
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-pink-500 dark:text-gray-300">{category.name}</h3>
+        <div class="space-y-4">
+          {category.skills.map((skill) => (
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <span class="font-medium  dark:text-gray-200">{skill.name}</span>
+                </div>
+                <span class="text-sm font-medium text-gray-600 dark:text-gray-400">{skill.level}%</span>
+              </div>
+              <ProgressBar value={skill.level} />
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

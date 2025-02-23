@@ -1,0 +1,89 @@
+---
+import Icon from "astro-icon"
+
+
+interface Skill {
+  name: string;
+  level: number;
+  icon: string;
+}
+
+interface SkillCategory {
+  name: string;
+  skills: Skill[];
+}
+
+const skillCategories: SkillCategory[] = [
+  {
+    name: "Lenguajes",
+    skills: [
+      { name: "JavaScript", level: 85, icon: "logos:javascript" },
+      { name: "TypeScript", level: 75, icon: "logos:typescript-icon" },
+      { name: "Python", level: 70, icon: "logos:python" },
+      { name: "Java", level: 65, icon: "logos:java" },
+      { name: "C#", level: 60, icon: "logos:c-sharp" },
+    ]
+  },
+  {
+    name: "Bases de Datos",
+    skills: [
+      { name: "PostgreSQL", level: 80, icon: "logos:postgresql" },
+      { name: "MongoDB", level: 75, icon: "logos:mongodb" },
+      { name: "MySQL", level: 70, icon: "logos:mysql" },
+      { name: "Redis", level: 65, icon: "logos:redis" },
+      { name: "SQLite", level: 60, icon: "logos:sqlite" },
+    ]
+  },
+  {
+    name: "Frameworks",
+    skills: [
+      { name: "React", level: 85, icon: "logos:react" },
+      { name: "Vue", level: 75, icon: "logos:vue" },
+      { name: "Angular", level: 70, icon: "logos:angular-icon" },
+      { name: "Next.js", level: 80, icon: "logos:nextjs-icon" },
+      { name: "Astro", level: 75, icon: "logos:astro" },
+    ]
+  },
+  {
+    name: "Herramientas",
+    skills: [
+      { name: "Git", level: 85, icon: "logos:git-icon" },
+      { name: "Docker", level: 75, icon: "logos:docker-icon" },
+      { name: "Webpack", level: 70, icon: "logos:webpack" },
+      { name: "VS Code", level: 90, icon: "logos:visual-studio-code" },
+      { name: "Figma", level: 65, icon: "logos:figma" },
+    ]
+  }
+];
+
+const ProgressBar = ({ value }: { value: number }) => (
+  <div class="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
+    <div class="bg-blue-600 h-2 rounded-full" style={`width: ${value}%`}></div>
+  </div>
+);
+---
+
+<div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 w-full max-w-4xl mx-auto">
+  <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Mis Habilidades Técnicas</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    {skillCategories.map((category) => (
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">{category.name}</h3>
+        <div class="space-y-4">
+          {category.skills.map((skill) => (
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <Icon name={skill.icon} class="w-6 h-6" />
+                  <span class="font-medium text-gray-700 dark:text-gray-200">{skill.name}</span>
+                </div>
+                <span class="text-sm font-medium text-gray-600 dark:text-gray-400">{skill.level}%</span>
+              </div>
+              <ProgressBar value={skill.level} />
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

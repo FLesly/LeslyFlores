@@ -1,0 +1,15 @@
+---
+import proyectoCard from '../components/proyectoCard.astro';
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+
+// Lista de proyectos
+const proyectoLs = [
+  { name: "PetFinder", url: "/pet_finder.png", descripcion: "Logos: HTML, CSS, JavaScript" },
+  { name: "Better Than Slice", url: "/bts_mockup.png", descripcion: "Logos: Next.js, TailwindCSS" },
+];
+---
+
+<Layout title="Proyectos">
+    <proyectoCard />
+</Layout>

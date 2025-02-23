@@ -1,0 +1,77 @@
+---
+import ProgressBar from "../components/ProgressBar.astro";
+interface Skill {
+  name: string;
+  level: number;
+}
+
+interface SkillCategory {
+  name: string;
+  skills: Skill[];
+}
+
+const skillCategories: SkillCategory[] = [
+  {
+    name: "Lenguajes",
+    skills: [
+      { name: "JavaScript", level: 85  },
+      { name: "TypeScript", level: 75 },
+      { name: "Python", level: 70},
+      { name: "HTML", level: 70},
+      { name: "Java", level: 65},
+      { name: "PHP", level: 65},
+    ]
+  },
+  {
+    name: "Bases de Datos",
+    skills: [
+      { name: "MongoDB", level: 75},
+      { name: "MySQL", level: 70},
+      { name: "PostgreSQL", level: 60},
+      { name: "Oracle Batabese", level: 60},
+    ]
+  },
+  {
+    name: "Frameworks",
+    skills: [
+      { name: "React", level: 85},
+      { name: "Laravel", level: 70},
+      { name: "Next.js", level: 80 },
+      { name: "Astro", level: 75},
+    ]
+  },
+  {
+    name: "Herramientas",
+    skills: [
+      { name: "Git", level: 8},
+      { name: "VS Code", level: 90 },
+      { name: "Figma", level: 65 },
+    ]
+  }
+];
+
+--- 
+
+<div class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 w-full max-w-4xl mx-auto">
+  <h2 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Mis Habilidades Técnicas</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    {skillCategories.map((category) => (
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-gray-700 dark:text-gray-300">{category.name}</h3>
+        <div class="space-y-4">
+          {category.skills.map((skill) => (
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <span class="font-medium text-gray-700 dark:text-gray-200">{skill.name}</span>
+                </div>
+                <span class="text-sm font-medium text-gray-600 dark:text-gray-400">{skill.level}%</span>
+              </div>
+              <ProgressBar value={skill.level} />
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
