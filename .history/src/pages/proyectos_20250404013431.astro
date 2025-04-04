@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+
+// Lista de proyectos
+const proyectoLs = [
+  { 
+    name: "PetFinder", 
+    url: "/pet_finder.jpeg", 
+    descripcion: "PetFinder es una webapp que permite a las personas dar en adopción o adoptar mascotas. Fue desarrollada en equipo utilizando Next.js, y participé activamente en el backend, bases de datos y frontend. También asumí el rol de Scrum Master, facilitando la organización del equipo y asegurando una comunicación efectiva durante el desarrollo."
+  },
+  { 
+    name: "Better Than Slice", 
+    url: "/bts_mockup.png", 
+    descripcion: "Better Than Slice es un sistema de reparto de comida desarrollado en pareja, utilizando HTML, CSS, MongoDB y typestring. Durante el proyecto, me enfoqué en la lógica de negocio y la implementación de funcionalidades clave en backend y frontend, destacando mis habilidades en programación full-stack."
+  },
+  { 
+    name: "Arquitectura Escalable para Comercio Digital", 
+    url: "/Terraform.png", 
+    descripcion: `Una organización enfocada al comercio en línea busca evolucionar su plataforma con miras a la escalabilidad y la flexibilidad. Han definido ciertos requerimientos que involucran ofrecer contenido estático, facilitar dos aplicaciones web distintas para los usuarios (pública y administrativa), manejar tareas en segundo plano, contar con un almacenamiento de archivos y un componente que acelere las consultas más frecuentes. El objetivo es que cada equipo investigue y proponga la manera de cumplir estos requerimientos a través de los servicios y la infraestructura que considere más adecuados.  <a href='https://github.com/FLesly/Repositorio_A.git'>Repositorio A</a>,  <a href='https://github.com/FLesly/Repositorio_B.git'>Repositorio B</a>, <a href='https://github.com/FLesly/Repositorio_C.git'>Repositorio C</a>.`  }
+];
+
+---
+
+<Layout title="Proyectos">
+  <div class="container mx-auto p-4">
+    <h1 class="text-3xl text-pink-500 font-bold mb-6 text-primary">Mis Proyectos</h1>
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
+      
+      {proyectoLs.map((proyecto) => (
+        <div class="bg-white shadow-md rounded-lg overflow-hidden grid grid-cols-2" >
+          <img src={proyecto.url} alt={proyecto.name} class="w-full h-full p-4 object-cover" />
+          <div class="p-4">
+            <h2 class="text-xl text-teal-500 font-semibold mb-2">{proyecto.name}</h2>
+            <p class="text-gray-600">{proyecto.descripcion}</p>
+          </div>
+        </div>
+      ))}
+      
+    </div>
+  </div>
+</Layout>
