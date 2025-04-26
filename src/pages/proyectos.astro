@@ -49,29 +49,49 @@ const proyectoLs = [
             </div>
             <div class="bg-white shadow-md rounded-lg overflow-hidden grid grid-cols-2" >
               <img src="/expertos.png" alt="Arquitectura Escalable para Comercio Digital" class="w-full h-full p-4 object-contain" />
-              <div class="p-4">
-                <h2 class="text-xl text-teal-500 font-semibold mb-2">  Evolución del Generador de
-                  Reportes V1</h2>
-                <p class="text-gray-600">Desarrollé un sistema completo de generación de reportes que permite a los usuarios solicitar, gestionar y descargar informes detallados sobre Pokémon. La aplicación utiliza una arquitectura moderna y desacoplada con microservicios desplegados en la nube de Azure, implementando patrones de procesamiento asíncrono para manejar tareas intensivas sin bloquear la experiencia del usuario. </p>
-                <h4 class="text-xl text-teal-500 font-semibold mb-2">
-                  Tecnologías Utilizadas
-                </h4>
-                <p class="text-gray-600">Frontend: Next.js (React) con Tailwind CSS y componentes shadcn/ui
-                  Backend: API RESTful con FastAPI (Python)
-                  Procesamiento Asíncrono: Azure Functions con Queue Triggers
-                  Almacenamiento: Azure Blob Storage para archivos CSV, Azure Queue Storage para mensajes
-                  Base de Datos: Azure SQL Database
-                  API Externa: Integración con PokeAPI para obtención de datos</p>
-               
-                  <h4 class="text-xl text-teal-500 font-semibold mb-2">
-                    Funcionalidades Implementadas
-                  </h4>
-                  <p class="text-gray-600">Incluye la generación asíncrona de reportes de Pokémon en formato CSV, visualización interactiva con estados en tiempo real y descarga mediante URLs firmadas. También cuenta con un sistema de eliminación de reportes y enriquecimiento de datos con estadísticas detalladas de cada Pokémon.</p>
-                  <h4 class="text-xl text-teal-500 font-semibold mb-2">
-                    Desafíos y Soluciones
-                  </h4>
-                  <p class="text-gray-600">En este proyecto, diseñé sistemas distribuidos usando tecnologías de Azure para lograr procesamiento asíncrono, gestión eficiente de recursos en la nube, experiencia de usuario fluida y manejo robusto de datos externos. Implementé colas y funciones serverless, clases utilitarias para servicios cloud, notificaciones en tiempo real y optimización de consultas a APIs, garantizando escalabilidad, eficiencia y una excelente experiencia de usuario.</p>
-                <div class="mt-4">
+              <section class="p-6 bg-white rounded-xl shadow-md">
+  <h2 class="text-2xl text-teal-600 font-bold mb-4">Evolución del Generador de Reportes V1</h2>
+  <p class="text-gray-700 mb-6 leading-relaxed">
+    Desarrollé un sistema completo de generación de reportes que permite a los usuarios solicitar, gestionar y descargar informes detallados sobre Pokémon. 
+    La aplicación utiliza una arquitectura moderna y desacoplada con microservicios desplegados en la nube de Azure, implementando patrones de procesamiento asíncrono 
+    para manejar tareas intensivas sin bloquear la experiencia del usuario.
+  </p>
+
+  <h3 class="text-xl text-teal-500 font-semibold mb-2">Tecnologías Utilizadas</h3>
+  <ul class="list-disc list-inside text-gray-700 mb-6 leading-relaxed">
+    <li><strong>Frontend:</strong> Next.js (React) con Tailwind CSS y componentes shadcn/ui</li>
+    <li><strong>Backend:</strong> API RESTful con FastAPI (Python)</li>
+    <li><strong>Procesamiento Asíncrono:</strong> Azure Functions con Queue Triggers</li>
+    <li><strong>Almacenamiento:</strong> Azure Blob Storage para archivos CSV, Azure Queue Storage para mensajes</li>
+    <li><strong>Base de Datos:</strong> Azure SQL Database</li>
+    <li><strong>API Externa:</strong> Integración con PokeAPI para obtención de datos</li>
+  </ul>
+
+  <h3 class="text-xl text-teal-500 font-semibold mb-2">Funcionalidades Implementadas</h3>
+  <p class="text-gray-700 mb-6 leading-relaxed">
+    Incluye la generación asíncrona de reportes de Pokémon en formato CSV, visualización interactiva con estados en tiempo real 
+    y descarga mediante URLs firmadas. También cuenta con un sistema de eliminación de reportes y enriquecimiento de datos con 
+    estadísticas detalladas de cada Pokémon.
+  </p>
+
+  <h3 class="text-xl text-teal-500 font-semibold mb-2">Desafíos y Soluciones</h3>
+  <p class="text-gray-700 mb-6 leading-relaxed">
+    Diseñé sistemas distribuidos usando tecnologías de Azure para lograr procesamiento asíncrono, gestión eficiente de recursos en la nube, 
+    experiencia de usuario fluida y manejo robusto de datos externos. Implementé colas y funciones serverless, clases utilitarias para servicios cloud, 
+    notificaciones en tiempo real y optimización de consultas a APIs, garantizando escalabilidad, eficiencia y una excelente experiencia de usuario.
+  </p>
+
+  <h3 class="text-xl text-teal-500 font-semibold mb-2">Repositorios de GitHub y URLs</h3>
+  <ul class="list-disc list-inside text-blue-600 leading-relaxed">
+    <li><a href="#" class="hover:underline">poke.queue.api</a></li>
+    <li><a href="#" class="hover:underline">poke.queue.ui</a></li>
+    <li><a href="#" class="hover:underline">poke.queue.function</a></li>
+    <li><a href="#" class="hover:underline">poke.terraform</a></li>
+    <li><a href="#" class="hover:underline">poke.queue.sql</a></li>
+    <li><a href="#" class="hover:underline">API</a></li>
+    <li><a href="#" class="hover:underline">UI</a></li>
+  </ul>
+</section>
                   <h3 class="font-semibold text-teal-500">Repositorios de GitHub y s URLs a UI y la API </h3>
                   <ul class="list-none p-0">
                     <li><a href="https://github.com/FLesly/poke.queue.api.git" class="text-blue-500 hover:underline" target="_blank">poke.queue.api</a></li>
